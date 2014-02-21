@@ -9,6 +9,8 @@ function themeConfig($form) {
     $form->addInput($rightBgcolor);
     $rightBgimg = new Typecho_Widget_Helper_Form_Element_Text('rightBgimg', NULL, NULL, _t('内容区背景图片'), _t('在这里填入一个图片URL地址, 以在网站内容区域背景使用图片'));
     $form->addInput($rightBgimg);
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('网站图标'), _t('在这里填入一个网站图标URL地址, 以便访问者浏览器的收藏夹使用'));
+    $form->addInput($favicon);
     
     //是否启用返回顶部按钮
     $FunctionShow = new Typecho_Widget_Helper_Form_Element_Checkbox('FunctionShow', 

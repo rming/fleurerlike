@@ -9,6 +9,9 @@
 <?php if (!empty($this->options->FunctionShow) && in_array('AllowRss', $this->options->FunctionShow)):$noRss='';else:$noRss='&rss1=&rss2=&atom=';endif; ?>
 <?php if (!empty($this->options->FunctionShow) && in_array('AllowPingback', $this->options->FunctionShow)):$noPingback='';else:$noPingback='&pingback=';endif; ?>
 <?php $this->header('generator=&template='.$noOfflineEdit.$noRss.$noPingback); ?>
+<?php if ($this->options->favicon):?>
+<link rel="shortcut icon" type="image/png" href="<?php $this->options->favicon()?>" />
+<?php endif;?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.min.css'); ?>" />
 <?php if (!empty($this->options->FunctionShow) && in_array('ShowBacktop', $this->options->FunctionShow)): ?>
 <script type="text/javascript" src="<?php $this->options->themeUrl('js/jquery-1.7.2.min.js'); ?>"></script>
