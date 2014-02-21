@@ -367,7 +367,7 @@ a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
 .page_wrap ul li.page_pre{float:left;}
 .page_wrap ul li.page_next{float:right;}
 /************评论区域****************/
-#comments {margin-top: 10px; width:800px;}
+#comments {margin-top: 10px; width:100%;}
 ol.comment-list, ol.comment-list ol {margin: 0;list-style: none;}
 ol.comment-list ol {padding-top: 2px;}
 ol.comment-list li {margin: 0;padding-bottom: 2px;}
@@ -376,7 +376,7 @@ ol.comment-list li .comment-reply {text-align: right;}
 ol.comment-list li .comment-reply a {font-size: 11px;border: none;color: #aaa;}
 ol.comment-list li .comment-reply a:hover {color: #444;}
 .comment-meta {padding-bottom: 2px;color: #999;font-size: 11px;}
-.comment-author {display: block;width:600px;font-size: 15px;color: #444;}
+.comment-author {display: block;width:300px;font-size: 15px;color: #444;}
 .comment-author cite.fn {font-style: normal;}
 .comment-body {overflow: hidden;}
 img.avatar {float: left;margin: 6px 10px 0 0;}
