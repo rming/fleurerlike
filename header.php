@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="<?php $this->options->charset(); ?>" />
+<meta http-equiv="Content-Type" charset="<?php $this->options->charset(); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title><?php if($this->is('index')): ?><?php $this->options->title(); ?>
 <?php elseif($this->is('archive')): ?><?php $this->options->title(); ?><?php $this->archiveTitle('',' - ',''); ?>
 <?php else: ?><?php $this->options->title(); ?><?php $this->archiveTitle('',' - ',''); ?><?php endif; ?></title>
