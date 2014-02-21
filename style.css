@@ -170,12 +170,26 @@ mark {
 }
 
 /* 代码片断 */
-pre, code {
+pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-pre {
+code{
+	font-family: "Courier New", Courier, monospace;
+	white-space: nowrap;
+	word-wrap: break-word;
+	border: 1px solid #DDD;
+	background-color: #F8F8F8;
+	border-radius: 3px;
+	margin-bottom: 3px;
+	padding:0px 4px;
+	line-height:1.4;
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+pre  {
     background: #f8f8f8;
     border:1px solid #ddd;
     padding: 1em 1.5em;
