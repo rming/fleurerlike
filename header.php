@@ -37,4 +37,4 @@ body {background:<?php if ($this->options->rightBgcolor): $this->options->rightB
 <?php $this->widget('Widget_Contents_Page_List')->parse('<a href="{permalink}">{title}</a>'); ?>
 <small><a href="http://www.typecho.org" target="_blank">Powered by Typecho)))</a></small>
 </div>
-<div class="content_wrap" >
+<div class="content_wrap" <?php if ($this->_archiveSlug=='404'){echo "style=\"width:900px;\"";};?> >
