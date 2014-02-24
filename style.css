@@ -339,7 +339,7 @@ a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
 .header small a:hover{color:#AC7B7B;text-shadow:none;}
 .header form input{border:none;background:#eee;padding:2px;font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif;}
 /*********content_wrap*********/
-.content_wrap{width:882px;height:100%;margin-left:220px;padding:30px;}
+.content_wrap{width:884px;height:100%;margin-left:220px;padding:30px;}
 /**********归档模板************/
 .archive_wrap ul li{list-style:circle;list-style-position:inside;}
 /**********友情链接************/
