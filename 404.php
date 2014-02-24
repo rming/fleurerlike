@@ -1,5 +1,5 @@
 <?php $this->need('header.php'); ?>
-<pre style="font: 4px/4px monospace;">                                                                                                                                              
+<pre style="font-size:11px;font-family:'simsun';line-height:4px;">                                                                                                                                              
                          ,::::::::::                             :::::::::::                                            .::::::::::           
                          '++++++++++                             +++++++++++                                            :++++++++++           
                          '++++++++++                             +++++++++++                                            :++++++++++           
