@@ -335,11 +335,11 @@ body{background-color:#eee;}
 .header a:hover{color:#fff;text-decoration:none;}
 a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
 .header form{margin-bottom:10px;}
-.header small a{color:#805454;position:absolute;bottom:50px;width:100%;}
+.header small a{color:#996666;position:absolute;bottom:50px;width:100%;}
 .header small a:hover{color:#AC7B7B;text-shadow:none;}
 .header form input{border:none;background:#eee;padding:2px;font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif;}
 /*********content_wrap*********/
-.content_wrap{width:880px;height:100%;margin-left:220px;padding:30px;}
+.content_wrap{width:882px;height:100%;margin-left:220px;padding:30px;}
 /**********归档模板************/
 .archive_wrap ul li{list-style:circle;list-style-position:inside;}
 /**********友情链接************/
