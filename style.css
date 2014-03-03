@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 ::-webkit-scrollbar-thumb:vertical{height:10px;background-color:#ccc;}
 ::-webkit-scrollbar{width:15px;height:5px;background:#FFF;margin-right:15px;}
 ::selection {color: #fff;background-color: #666;text-shadow: none;}
@@ -183,7 +183,6 @@ pre code {
 }
 code{
 	font-family: "Courier New", Courier, monospace;
-	white-space: nowrap;
 	word-wrap: break-word;
 	border: 1px solid #DDD;
 	background-color: #F8F8F8;
