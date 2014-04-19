@@ -87,7 +87,7 @@ blockquote blockquote {
     margin-left: 2em;
 }
 blockquote p {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 /* Firefox 以外，元素没有下划线，需添加 */
@@ -398,3 +398,4 @@ ol.comment-list li .respond {border-top: 1px solid #ddd;padding-top: 2px;}
 .comment-content p{text-indent:2.7em;}
 ol#comment_list li .respond .text {_width: 400px;}
 ol#comment_list li .respond textarea {_width: 400px;}
+.page_wrap blockquote p {text-indent:0px;}
