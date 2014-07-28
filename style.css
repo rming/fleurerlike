@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 ::-webkit-scrollbar-thumb:vertical{height:10px;background-color:#ccc;}
 ::-webkit-scrollbar{width:15px;height:5px;background:#FFF;margin-right:15px;}
 ::selection {color: #fff;background-color: #666;text-shadow: none;}
@@ -189,6 +189,7 @@ code{
 	border-radius: 3px;
 	padding: 0px 4px 2px 4px;
 	max-width: 100%;
+    color:#B94A48;
 }
 pre  {
     background: #f8f8f8;
@@ -346,7 +347,7 @@ a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
 .links_wrap a{display:inline-block;width:100px;text-align:center;border:1px solid #A5A498;margin:5px 10px;}
 .links_wrap a:hover{background:#d5d4d8;}
 /**********列表分页************/
-.home_wrap{width:600px;}
+.home_wrap{max-width:600px;padding:0px 10px;}
 .home_wrap ul.post_list li{list-style:circle;list-style-position:inside;width:100%;}
 .home_wrap ul.post_list span.post_date{float:right;}
 .home_wrap  ol.page-navigator{text-align:center;}
@@ -360,9 +361,10 @@ a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
 .page_wrap .page_content{padding:10px 0px;float:left;width:100%;}
 .page_wrap .page_content img{max-width:750px;}
 .page_wrap p{text-indent:2em;}
-.page_wrap hr{border:0px;border-bottom:2px dashed #A8b5b5;;height:0px;margin:5px 0 5px 0;width:100%;}
+.page_wrap hr{border:0px;border-bottom:1px dashed #A8b5b5;;height:0px;margin:5px 0 5px 0;width:100%;}
 .page_wrap .page_content ul li{list-style:disc;list-style-position:inside;}
 .page_wrap .page_content ol li{list-style:decimal;list-style-position:inside;}
+.page_wrap .page_content  a{border-bottom:dashed 1px #555;}
 .page_wrap ul li.page_pre,.content_wrap ul li.page_next{background:#d8d5d5;list-style:none;padding:1px 5px;}
 .page_wrap ul.page_nav {display:block;height:30px;}
 .page_wrap ul li.page_pre{float:left;}
@@ -399,3 +401,5 @@ ol.comment-list li .respond {border-top: 1px solid #ddd;padding-top: 2px;}
 ol#comment_list li .respond .text {_width: 400px;}
 ol#comment_list li .respond textarea {_width: 400px;}
 .page_wrap blockquote p {text-indent:0px;}
+.red{color:#b94a48;}
+

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" charset="<?php $this->options->charset(); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title><?php if($this->is('index')): ?><?php $this->options->title(); ?>
 <?php elseif($this->is('archive')): ?><?php $this->options->title(); ?><?php $this->archiveTitle('',' - ',''); ?>
 <?php else: ?><?php $this->options->title(); ?><?php $this->archiveTitle('',' - ',''); ?><?php endif; ?></title>
@@ -20,7 +21,15 @@
 <style type="text/css">
 body {background:<?php if ($this->options->rightBgcolor): $this->options->rightBgcolor(); else:echo "#eee"; endif;?>  <?php if ($this->options->rightBgimg): ?>url('<?php $this->options->rightBgimg();?>') no-repeat right bottom fixed<?php endif;?>;}
 .header{background:<?php if ($this->options->leftBgcolor): $this->options->leftBgcolor(); else:echo "#551C1C"; endif;?>  <?php if ($this->options->leftBgimg): ?>url(<?php $this->options->leftBgimg();?>) left bottom no-repeat<?php endif; ?>;}
-<?php if ($this->options->leftBgcolor): $this->options->leftBgcolor(); endif;?>
+ @media (max-width: 1000px) {
+   body,.header{background-image:none;}
+    .content_wrap{width:100%;margin-left:0px;padding: 0px;margin-top:48px;}
+    .page_wrap .page_content img{max-width:100%;}
+    .home_wrap{padding-bottom:20px;margin: 0 auto;margin-top:48px;}
+    #topcontrol{display:none;}
+    .header{width:100%;height:45px;overflow:hidden;padding:0px;}
+}
+    
 </style>
 </head>
 <body>
