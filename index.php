@@ -4,7 +4,7 @@
  *
  * @package Typecho FleurerLike  Theme
  * @author Rming
- * @version 0.1
+ * @version 0.2
  * @link http://rmingwang.com
  */
 $this->need('header.php');?>
