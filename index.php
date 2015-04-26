@@ -1,7 +1,7 @@
 <?php
 /**
  * 类似 <a href="http://fleurer-lee.com/" target="_blank">fleurer</a> 博客，简洁风格主题。
- * 
+ *
  * @package Typecho FleurerLike  Theme
  * @author Rming
  * @version 0.1

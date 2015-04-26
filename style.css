@@ -1,405 +1,750 @@
 @charset "utf-8";
-::-webkit-scrollbar-thumb:vertical{height:10px;background-color:#ccc;}
-::-webkit-scrollbar{width:15px;height:5px;background:#FFF;margin-right:15px;}
-::selection {color: #fff;background-color: #666;text-shadow: none;}
-::-moz-selection {color: #fff; background-color: #666; text-shadow: none;}
-#topcontrol a{background:url('./images/icon.png') 0px 0px no-repeat;}
-#topcontrol a:hover{background-position:-50px 0px;}
-/*************typo****************/
-/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 10px;
+    background-color: #ccc
+}
+::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+    background: #FFF;
+    margin-right: 15px
+}
+::selection {
+    color: #fff;
+    background-color: #666;
+    text-shadow: none
+}
+::-moz-selection {
+    color: #fff;
+    background-color: #666;
+    text-shadow: none
+}
+#topcontrol a {
+    background: url('./images/icon.png') 0px 0px no-repeat
+}
+#topcontrol a:hover {
+    background-position: -50px 0px
+}
 html {
     color: #444333;
-    /*background: #fff;*/
-    -webkit-text-size-adjust: 100%;
+    font: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
     -ms-text-size-adjust: 100%;
-    text-rendering: optimizelegibility;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizelegibility
 }
-a{color: #444333;}
-/* 内外边距通常让各个浏览器样式的表现位置不同 */
+a {
+    color: #444333;
+    cursor: pointer
+}
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
-
-/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+    display: block
 }
-
-/* HTML5 媒体文件跟 img 保持一致 */
 audio, canvas, video {
     display: inline-block;
     *display: inline;
-    *zoom: 1;
+    *zoom: 1
 }
-
-/* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-    font:500 0.945em/1.744 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font: 0.945em/1.744 FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
-
-/* 去除 IE6 input/button 多余的空白 */
 button, input {
     *width: auto;
     *overflow: visible;
-
-    /* 让 input 和 button 一样高 */
-    line-height:22px;
+    line-height: 22px
 }
-
-/* 去掉各Table  cell 的边距并让其边重合 */
 table {
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 0
 }
-
-/* IE bug fixed: th 不继承 text-align*/
 th {
-    text-align: inherit;
+    text-align: inherit
 }
-
-/* 去除默认边框 */
 fieldset, img {
-    border: 0;
+    border: 0
 }
-
-/* 解决 IE6-7 图片缩放锯齿问题 */
 img {
-    -ms-interpolation-mode: bicubic;    
+    -ms-interpolation-mode: bicubic
 }
-
-/* ie6 7 8(q) bug 显示为行内表现 */
 iframe {
-    display: block;
+    display: block
 }
-
-/* 块/段落引用 */
 blockquote {
-    font-family:Optima, Georgia, STSong, serif;
-    margin: 1em 0;
-    color:#999;
-    padding: 0.6em 1em;
-    background:#f8f8f8;
-    border-left: 0.4em solid #ddd;
+    font-family: Optima, Georgia, STSong, serif;
+    font-size: 14px;
+    font-style: italic;
+    margin: 0.25em 0;
+    padding: 0.25em 20px;
+    line-height: 1.5;
+    position: relative;
+    color: #999;
+    background: #fff;
+    border-radius: 0px 60px 0px 60px;
+    -webkit-border-radius: 0px 60px 0px 60px;
+    -moz-border-radius: 0px 60px 0px 60px
 }
-blockquote blockquote {
-    padding: 0 0 0 1em;
-    margin-left: 2em;
+blockquote:before, blockquote:after {
+    font-family: Georgia, serif;
+    display: block;
+    font-size: 80px;
+    color: #7a7a7a
+}
+blockquote:before {
+    content: "\201C";
+    position: absolute;
+    left: -15px;
+    top: -25px
+}
+blockquote:after {
+    content: "\201D";
+    position: absolute;
+    right: 0px;
+    bottom: -60px
 }
 blockquote p {
-    margin-bottom: 0px;
+    text-indent: 2em
 }
-
-/* Firefox 以外，元素没有下划线，需添加 */
+blockquote cite {
+    color: #999999;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px
+}
+blockquote cite:before {
+    content: "\2014 \2009"
+}
 acronym, abbr {
     border-bottom: 1px dotted;
-    font-variant: normal;
+    font-variant: normal
 }
-
-/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
 abbr {
-    cursor: help;
+    cursor: help
 }
-
-/* 一致的 del 样式 */
 del {
-    text-decoration: line-through;
+    text-decoration: line-through
 }
-
 address, caption, cite, code, dfn, em, th, var {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400
 }
-
-/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
 ul, ol {
-    list-style: none;
+    list-style: none
 }
-
-/* 对齐是排版最重要的因素, 别让什么都居中 */
 caption, th {
-    text-align: left;
+    text-align: left
 }
-
 q:before, q:after {
-    content: '';
+    content: ''
 }
-
-/* 统一上标和下标 */
 sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: text-top\9;
+    vertical-align: text-top\9
 }
-:root sub, :root sup{
-    vertical-align: baseline; /* for ie9 and other mordern browsers */
+:root sub, :root sup {
+    vertical-align: baseline
 }
 sup {
-    top: -0.5em;
+    top: -0.5em
 }
 sub {
-    bottom: -0.25em;
+    bottom: -0.25em
 }
-
-/* 让链接在 hover 状态下无下划线 */
 a:hover {
     text-decoration: none;
-    color:#111000;
-    text-shadow: 0px 0px 0px #444333; 
+    color: #111000;
+    text-shadow: 0px 0px 0px #444333
 }
-
-/* 默认不显示下划线，保持页面简洁 */
 ins, a {
-    text-decoration: none;
+    text-decoration: none
 }
-
-/* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
- * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
- * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
- * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
- * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/ 
- */
-u, .typo-u {
-    text-decoration: underline;
+u {
+    text-decoration: underline
 }
-
-/* 标记，类似于手写的荧光笔的作用 */
 mark {
-    background: #fffdd1;
+    background: #fffdd1
 }
-
-/* 代码片断 */
 pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre-wrap;
     word-wrap: break-word;
-    margin:5px;
+    margin: 5px
 }
 pre code {
     background-color: #F8F8F8;
-    border: none;    
-    padding: 0;
+    border: none;
+    padding: 0
 }
-code{
-	font-family: "Courier New", Courier, monospace;
-	word-wrap: break-word;
-	border: 1px solid #DDD;
-	background-color: #F8F8F8;
-	border-radius: 3px;
-	padding: 0px 4px 2px 4px;
-	max-width: 100%;
-    color:#B94A48;
+code {
+    font-family: "Courier New", Courier, monospace;
+    word-wrap: break-word;
+    border: 1px solid #DDD;
+    background-color: #F8F8F8;
+    border-radius: 3px;
+    padding: 2px 4px 2px 4px;
+    max-width: 100%;
+    color: #B94A48
 }
-pre  {
+pre {
     background: #f8f8f8;
-    border:1px solid #ddd;
-    padding: 1em 1.5em;
+    border: 1px solid #ddd;
+    padding: 1em 1.5em
 }
 pre > code {
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
-/* 一致化 horizonal rule */
-hr{
-    border:none;
-    border-bottom:1px solid #cfcfcf;
-    margin-bottom:10px;
-    *color:pink;*filter:chroma(color=pink);
-    height:10px;
-    *margin:-7px 0 2px;
+hr {
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+    *color: pink;
+    *filter: chroma(color=pink);
+    height: 10px;
+    *margin: -7px 0 2px
 }
-
-/* 底部印刷体、版本等标记 */
-small, .typo-small, 
-
-/* 图片说明 */
-figcaption {
+small, figcaption {
     font-size: 0.9em;
-    color: #888;
+    color: #888
 }
-
-/* 可拖动文件添加拖动手势 */
 [draggable] {
-    cursor: move;
+    cursor: move
 }
-
 .clearfix:before, .clearfix:after {
     content: "";
-    display: table;
+    display: table
 }
-
 .clearfix:after {
     clear: both
 }
-
 .clearfix {
     zoom: 1
 }
-
-/* 强制文本换行 */
-.textwrap, .textwrap td, .textwrap th{
-    word-wrap:break-word;
-    word-break:break-all;
+.textwrap, .textwrap td, .textwrap th {
+    word-wrap: break-word;
+    word-break: break-all
 }
-.textwrap-table{
-    table-layout:fixed;
+.textwrap-table {
+    table-layout: fixed
 }
-
-/* 提供 serif 版本的字体设置 */
-.serif{font-family:Palatino, Optima, STSong, Georgia, serif;}
-
-/* 保证块/段落之间的空白隔行 */
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
-    margin-bottom: 1.2em;
+.serif {
+    font-family: Palatino, Optima, STSong, Georgia, serif
 }
-
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     *font-weight: 800;
-    font-family: Helvetica Neue, Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-    color:#333;
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    color: #333
 }
-
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
-.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
-.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
-    margin-bottom: 0.4em;
-    line-height: 1.5;
+legend, caption {
+    font-weight: 700
 }
-.typo h1, .typo-h1 {
-    font-size: 1.8em;
+body {
+    background-color: #eee
 }
-.typo h2, .typo-h2 {
-    font-size: 1.6em;
+.header {
+    width: 200px;
+    height: 100%;
+    color: #dedede;
+    text-align: center;
+    background-color: #551C1C;
+    padding: 20px 10px;
+    padding-top: 30px;
+    position: fixed;
+    top: 0px;
+    left: 0px
 }
-.typo h3, .typo-h3 {
-    font-size: 1.4em;
+.header a {
+    font-size: 1.1em;
+    color: #dedede;
+    font-family: Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", serif
 }
-.typo h4, .typo-h4 {
-    font-size: 1.2em;
+.header a:hover {
+    color: #fff;
+    text-decoration: none
 }
-.typo h5, .typo h6, .typo-h5, .typo-h6 {
-    font-size: 1em;
+a.logo {
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto
 }
-
-/* 在文章中，应该还原 ul 和 ol 的样式 */
-.typo ul, .typo-ul {
-    margin-left: 1.3em;
-    list-style: disc;
+.user_avatar {
+    height: 80px;
+    width: 80px;
+    margin: 0px 4px 0px 0px;
+    float: left;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px
 }
-.typo ol, .typo-ol {
-    list-style: decimal;
-    margin-left: 1.9em;
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
 }
-.typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 2em;
+.header_links {
+    margin: 0 auto
 }
-.typo li ul, .typo-ul ul, .typo-ol ul {
+.header form {
+    margin: 10px auto
+}
+.header form:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+.header small a {
+    color: #996666;
+    position: absolute;
+    bottom: 50px;
+    width: 100%
+}
+.header small a:hover {
+    color: #AC7B7B;
+    text-shadow: none
+}
+.header form input {
+    border: none;
+    background: #eee;
+    padding: 2px;
+    font-family: Georgia, "Times New Roman", Times, "Songti SC", "SimSun", serif
+}
+.content_wrap {
+    width: 60%;
+    max-width: 880px;
+    height: 100%;
+    margin-left: 220px;
+    padding: 30px
+}
+.archive_wrap ul li {
     list-style: circle;
+    list-style-position: inside
 }
-
-/* 同 ul/ol，在文章中应用 table 基本格式 */
-.typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption{
+.links_wrap {
+    width: 100%
+}
+.links_wrap a {
+    margin: 5px 10px;
+    display: inline-block
+}
+.home_wrap {
+    max-width: 600px;
+    padding: 0px 10px
+}
+.home_wrap ul.post_list li {
+    list-style: circle;
+    list-style-position: inside;
+    width: 100%
+}
+.home_wrap ul.post_list span.post_date {
+    float: right
+}
+.home_wrap  ol.page-navigator {
+    text-align: center;
+    margin-top: 5px
+}
+.home_wrap  ol.page-navigator li {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    font-size: 0.8em
+}
+.home_wrap  ol.page-navigator li a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #A5A498
+}
+.home_wrap  ol li.current a, .page-navigator li a:hover {
+    background: #d5d4d8
+}
+.page_wrap {
+    padding: 0px 40px
+}
+.page_wrap h1.page_title {
+    text-align: center
+}
+.page_wrap .page_info {
+    text-align: center
+}
+.page_wrap .page_content {
+    padding: 10px 0px;
+    float: left;
+    width: 100%
+}
+.page_wrap .page_content  img {
+    max-width: 100%
+}
+.page_wrap .page_content  p {
+    margin: 10px 0px
+}
+.page_wrap .page_content > ul, .page_wrap .page_content > ol, .page_wrap li>ul, li > ol {
+    margin-left: 2em
+}
+.page_wrap .page_content > hr {
+    border: 0px;
+    border-bottom: 1px dashed #A8b5b5;
+    height: 0px;
+    margin: 5px 0 5px 0;
+    width: 100%
+}
+.page_wrap .page_content ul li {
+    list-style: disc;
+    list-style-position: inside
+}
+.page_wrap .page_content ol li {
+    list-style: decimal;
+    list-style-position: inside
+}
+.page_wrap .page_content  a {
+    border-bottom: dashed 1px #555
+}
+.page_wrap ul li.page_pre, .content_wrap ul li.page_next {
+    background: #d8d5d5;
+    list-style: none;
+    padding: 1px 5px
+}
+.page_wrap ul.page_nav {
+    display: block;
+    height: 30px
+}
+.page_wrap ul li.page_pre {
+    float: left
+}
+.page_wrap ul li.page_next {
+    float: right
+}
+#comments {
+    margin-top: 10px;
+    width: 100%
+}
+ol.comment-list, ol.comment-list ol {
+    margin: 0;
+    list-style: none
+}
+ol.comment-list ol {
+    padding-top: 2px
+}
+ol.comment-list li {
+    margin: 0;
+    padding-bottom: 2px
+}
+ol.comment-list li {
+    padding: 2px 3px;
+    margin-top: 2px;
+    border-top: 1px solid #A8B5B5;
+    overflow: hidden
+}
+ol.comment-list li .comment-reply {
+    text-align: right
+}
+ol.comment-list li .comment-reply a {
+    font-size: 11px;
+    border: none;
+    color: #aaa
+}
+ol.comment-list li .comment-reply a:hover {
+    color: #444
+}
+.comment-meta {
+    padding-bottom: 2px;
+    color: #999;
+    font-size: 11px
+}
+.comment-author {
+    display: block;
+    width: 300px;
+    font-size: 15px;
+    color: #444
+}
+.comment-author cite.fn {
+    font-style: normal
+}
+.comment-body {
+    overflow: hidden
+}
+img.avatar {
+    float: left;
+    margin: 6px 10px 0 0
+}
+.respond {
+    margin-top: 5px
+}
+.comment-children {
+    margin-left: 30px
+}
+ol.comment-list li .respond {
+    border-top: 1px solid #ddd;
+    padding-top: 2px
+}
+#comment_form {
+    padding-right: 2px
+}
+.respond .cancel-comment-reply {
+    float: right;
+    font-size: 11px
+}
+.respond .cancel-comment-reply a {
+    border: none;
+    color: #aaa
+}
+.respond .cancel-comment-reply a:hover {
+    color: #444
+}
+#comment_form label {
+    font-size: 13px;
+    color: #555;
+    display: block;
+    font-weight: bold;
+    float: left
+}
+#comment_form p {
+    text-indent: 0px;
+    margin: 5px 0px
+}
+#comment_form label .required {
+    color: #C04E37;
+    padding-left: 5px;
+    font-size: 14px;
+    display: none
+}
+#comment_form .text {
+    margin-right: 15px;
+    border: 1px solid #eee
+}
+#comment_form textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #A8B5B5;
+    background: #ddd;
+    padding: 5px
+}
+#comment_form .text {
+    border: 1px solid #A8B5B5;
+    background: #ddd
+}
+#comment_form input.submit {
+    float: right;
+    margin-top: 3px
+}
+.comment-content p {
+    text-indent: 2.7em
+}
+ol#comment_list li .respond .text {
+    _width: 400px
+}
+ol#comment_list li .respond textarea {
+    _width: 400px
+}
+.page_wrap blockquote p {
+    text-indent: 0px
+}
+.red {
+    color: #b94a48
+}
+.clear-fix {
+    clear: both
+}
+.content_wrap h2 {
+    font-size: 1.17em;
+    border-bottom: 1px dashed #a8b5b5
+}
+.content_wrap h3 {
+    font-size: 0.945em;
+    border-left: 5px solid  #a8b5b5;
+    text-indent: 0.5em;
+    margin: 6px 0px 8px 0px;
+    background: #DEDEDE
+}
+.attention {
+    background: url('images/attention.png') left top no-repeat;
+    text-indent: 26px;
+    margin: 4px 0px 8px 0px
+}
+.attention b {
+    font-weight: 800
+}
+.attention span {
+    color: #b94a48
+}
+.pull-right {
+    float: right !important
+}
+.pull-left {
+    float: left !important
+}
+.hidden {
+    display: none !important
+}
+em {
+    font-style: italic
+}
+table {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid #ddd
+}
+table>thead>tr>th, table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, table>tbody>tr>td, table>tfoot>tr>td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    line-height: 1.42857143
+}
+table>caption+thead>tr:first-child>th, table>colgroup+thead>tr:first-child>th, table>thead:first-child>tr:first-child>th, table>caption+thead>tr:first-child>td, table>colgroup+thead>tr:first-child>td, table>thead:first-child>tr:first-child>td {
+    border-top: 0
+}
+table>tbody+tbody {
+    border-top: 2px solid #ddd
+}
+table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, table>tbody>tr>td, table>tfoot>tr>td {
     border: 1px solid #ddd;
-    padding: 0.5em 1em;
-    color:#666;
+    text-align: center
 }
-.typo table th, .typo-table th {
-    background: #fbfbfb;
+table>thead>tr>th, table>thead>tr>td {
+    text-align: center;
+    border-bottom-width: 2px;
+    border: 1px solid #ddd;
+    font-weight: 800
 }
-.typo table thead th, .typo-table thead th {
-    background: #f1f1f1;
+table>tbody>tr:nth-child(odd) {
+    background-color: #f6f6f6
 }
-.typo table .caption {
-    border-bottom:none;
+.button {
+    color: #666;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    text-decoration: none;
+    outline: none;
+    border: solid #d0d0d0 1px;
+    margin: 3px 0px 15px 0px
 }
-
-/* 去除 webkit 中 input 和 textarea 的默认样式  */
-.typo-input, .typo-textarea{
-    -webkit-appearance:none;
-    border-radius:0;
+.button:visited {
+    color: #666
 }
-
-
-/* TODO: 供着重号使用 */
-.typo-em, .typo em, legend, caption {font-weight: 700;}
-/*********左侧导航*************/
-body{background-color:#eee;}
-.header{width:200px;height:100%;color:#dedede;text-align:center;background-color:#551C1C;padding:20px 10px;position:fixed;top:0px;left:0px;}
-.header a{font-size:1.1em;color:#dedede;display:block;font-family:Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai",serif;}
-.header a:hover{color:#fff;text-decoration:none;}
-a.logo{font-size:2em;font-family:Georgia,"Times New Roman",Times;}
-.header form{margin-bottom:10px;}
-.header small a{color:#996666;position:absolute;bottom:50px;width:100%;}
-.header small a:hover{color:#AC7B7B;text-shadow:none;}
-.header form input{border:none;background:#eee;padding:2px;font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif;}
-/*********content_wrap*********/
-.content_wrap{width:880px;height:100%;margin-left:220px;padding:30px;}
-/**********归档模板************/
-.archive_wrap ul li{list-style:circle;list-style-position:inside;}
-/**********友情链接************/
-.links_wrap{width:100%;}
-.links_wrap a{display:inline-block;width:100px;text-align:center;border:1px solid #A5A498;margin:5px 10px;}
-.links_wrap a:hover{background:#d5d4d8;}
-/**********列表分页************/
-.home_wrap{max-width:600px;padding:0px 10px;}
-.home_wrap ul.post_list li{list-style:circle;list-style-position:inside;width:100%;}
-.home_wrap ul.post_list span.post_date{float:right;}
-.home_wrap  ol.page-navigator{text-align:center;}
-.home_wrap  ol.page-navigator li{display:inline-block;width:22px;height:22px;margin-left:10px;font-size:0.8em;}
-.home_wrap  ol.page-navigator li a{display:inline-block;width:100%;text-align:center;border:1px solid #A5A498;}
-.home_wrap  ol li.current a,.page-navigator li a:hover{background:#d5d4d8;}
-/***********内容区域***********/
-.page_wrap{padding:0px 40px;}
-.page_wrap h1.page_title{text-align:center;}
-.page_wrap .page_info{text-align:center;}
-.page_wrap .page_content{padding:10px 0px;float:left;width:100%;}
-.page_wrap .page_content img{max-width:750px;}
-.page_wrap p{text-indent:2em;}
-.page_wrap hr{border:0px;border-bottom:1px dashed #A8b5b5;;height:0px;margin:5px 0 5px 0;width:100%;}
-.page_wrap .page_content ul li{list-style:disc;list-style-position:inside;}
-.page_wrap .page_content ol li{list-style:decimal;list-style-position:inside;}
-.page_wrap .page_content  a{border-bottom:dashed 1px #555;}
-.page_wrap ul li.page_pre,.content_wrap ul li.page_next{background:#d8d5d5;list-style:none;padding:1px 5px;}
-.page_wrap ul.page_nav {display:block;height:30px;}
-.page_wrap ul li.page_pre{float:left;}
-.page_wrap ul li.page_next{float:right;}
-/************评论区域****************/
-#comments {margin-top: 10px; width:100%;}
-ol.comment-list, ol.comment-list ol {margin: 0;list-style: none;}
-ol.comment-list ol {padding-top: 2px;}
-ol.comment-list li {margin: 0;padding-bottom: 2px;}
-ol.comment-list li {padding: 2px 3px;margin-top: 2px;border-top:1px solid #A8B5B5;overflow: hidden;}
-ol.comment-list li .comment-reply {text-align: right;}
-ol.comment-list li .comment-reply a {font-size: 11px;border: none;color: #aaa;}
-ol.comment-list li .comment-reply a:hover {color: #444;}
-.comment-meta {padding-bottom: 2px;color: #999;font-size: 11px;}
-.comment-author {display: block;width:300px;font-size: 15px;color: #444;}
-.comment-author cite.fn {font-style: normal;}
-.comment-body {overflow: hidden;}
-img.avatar {float: left;margin: 6px 10px 0 0;}
-.respond {margin-top: 5px;}
-.comment-children{margin-left:30px;}
-ol.comment-list li .respond {border-top: 1px solid #ddd;padding-top: 2px;}
-#comment_form {padding-right: 2px;}
-.respond .cancel-comment-reply {float: right;font-size: 11px;}
-.respond .cancel-comment-reply a {border: none;color: #aaa;}
-.respond .cancel-comment-reply a:hover {color: #444;}
-#comment_form label {font-size: 13px;color: #555;display: block;font-weight: bold;float: left;}
-#comment_form p{text-indent:0px;}
-#comment_form label .required {color: #C04E37;padding-left: 5px;font-size: 14px;display:none;}
-#comment_form .text {width: 260px;margin-right: 15px;border: 1px solid #eee;}
-#comment_form textarea {width: 100%;height: 100px;border: 1px solid #A8B5B5;background:#ddd;}
-#comment_form .text{border:1px solid #A8B5B5;background:#ddd;}
-#comment_form input.submit{float:right;margin-top:3px;}
-.comment-content p{text-indent:2.7em;}
-ol#comment_list li .respond .text {_width: 400px;}
-ol#comment_list li .respond textarea {_width: 400px;}
-.page_wrap blockquote p {text-indent:0px;}
-.red{color:#b94a48;}
-
+.button:active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-color: #cfcfcf;
+    color: #333;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2)
+}
+.button:disabled {
+    top: 0 !important;
+    background: #EEE !important;
+    border: 1px solid #DDD !important;
+    text-shadow: 0 1px 1px white !important;
+    color: #CCC !important;
+    cursor: default !important;
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    opacity: .8 !important
+}
+.button-rounded {
+    border-radius: 4px
+}
+.button-tiny {
+    font-size: 9.6px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 24px
+}
+@media (max-width:480px) {
+    .xs_hidden {
+        display: none !important
+    }
+    .post_date {
+        display: none
+    }
+    .page_wrap {
+        padding: 0px 15px
+    }
+}
+@media (max-width:720px) {
+    body {
+        font-size: 12px
+    }
+    .home_wrap  ol.page-navigator li {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+        font-size: 10px
+    }
+}
+@media (max-width:940px) {
+    #topcontrol, .header form {
+        display: none
+    }
+    .content_wrap {
+        width: 100%;
+        margin-left: 0px;
+        padding: 0px;
+        margin-top: 20px
+    }
+    .page_wrap .page_content img {
+        max-width: 100%
+    }
+    .page_wrap .page_title {
+        font-size: 18px
+    }
+    .home_wrap {
+        padding-bottom: 20px;
+        margin: 0 auto;
+        margin-top: 15px
+    }
+    .header {
+        width: 100%;
+        height: 45px;
+        padding: 6px 0px;
+        overflow: hidden;
+        position: static
+    }
+    .header a.logo, .user_avatar {
+        height: 46px;
+        width: 46px
+    }
+}
+@media (max-width:1024px) {
+    body, .header {
+        background-image: none !important
+    }
+}
+@media (max-width:1024px) and (min-width:940px) {
+    .content_wrap {
+        width: 72%
+    }
+}
