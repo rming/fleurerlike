@@ -541,9 +541,6 @@ ol.comment-list li .respond {
     float: right;
     margin-top: 3px
 }
-.comment-content p {
-    text-indent: 2.7em
-}
 ol#comment_list li .respond .text {
     _width: 400px
 }
